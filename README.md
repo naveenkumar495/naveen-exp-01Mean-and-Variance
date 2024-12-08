@@ -1,5 +1,6 @@
 # exp-01 Mean and variance of a discrete  distribution
 **NAME:NAVEENKUMAR**
+
 **REF NO:24900580**
 
 # Aim : 
@@ -49,10 +50,26 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
+~~~              
 
-
+import numpy as np
+x = np.array([1, 2, 3, 4, 5])  # Possible values (number of objects)
+f = np.array([5, 8, 7, 4, 1])  # Corresponding frequencies
+total_frequency = np.sum(f)
+probabilities = f / total_frequency
+mean = np.sum(x * probabilities)
+mean_square = np.sum((x ** 2) * probabilities)
+variance = mean_square - mean ** 2
+print(f"Mean (Expected Value): {mean}")
+print(f"Variance: {variance}")
+~~~    
 
 # Output : 
+
+Mean (Expected Value): 2.3333333333333335
+
+Variance: 1.7222222222222223
+
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
