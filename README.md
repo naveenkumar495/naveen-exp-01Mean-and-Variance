@@ -1,5 +1,6 @@
-#  Mean and variance of a discrete  distribution
-
+# exp-01 Mean and variance of a discrete  distribution
+**NAME:NAVEENKUMAR**
+**REF NO:24900580**
 
 # Aim : 
 
