@@ -50,25 +50,63 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
-~~~              
 
+~~~
 import numpy as np
-x = np.array([1, 2, 3, 4, 5])  # Possible values (number of objects)
-f = np.array([5, 8, 7, 4, 1])  # Corresponding frequencies
-total_frequency = np.sum(f)
-probabilities = f / total_frequency
-mean = np.sum(x * probabilities)
-mean_square = np.sum((x ** 2) * probabilities)
-variance = mean_square - mean ** 2
-print(f"Mean (Expected Value): {mean}")
-print(f"Variance: {variance}")
-~~~    
 
+L = [int(i) for i in input().split()]
+
+N = len(L); M = max(L)
+
+x = list(); f = list()
+
+for i in range(M + 1):
+
+    c = 0
+    
+    for j in range(N):
+    
+        if L[j] == i:
+            c = c + 1
+    
+    f.append(c)
+   
+    x.append(i)
+
+sf = np.sum(f)
+
+p = list()
+for i in range(M + 1):
+
+    p.append(f[i] / sf)
+
+
+mean = np.inner(x, p)
+
+EX2 = np.inner(np.square(x), p)
+
+var = EX2 - mean**2
+
+SD = np.sqrt(var)
+
+print("The Mean arrival rate is %.3f " % mean)
+
+print("The Variance of arrival from feeder is %.3f " % var)
+
+print("The Standard deviation of arrival from feeder is %.3f " % SD)
+~~~
 # Output : 
 
-Mean (Expected Value): 2.3333333333333335
+5 0 1 5 2 3 7 5 3 5 5 7 7 2 3 3 5 3 6 1
 
-Variance: 1.7222222222222223
+The Mean arrival rate is 3.900
+
+The Variance of arrival from feeder is 4.190
+
+The Standard deviation of arrival from feeder is 2.047
+
+# Results :
+The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
 
 
 # Results :
