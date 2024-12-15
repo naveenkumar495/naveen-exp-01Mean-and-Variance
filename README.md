@@ -1,4 +1,8 @@
- # EXP - 1
+ 
+# Procedure :
+
+1. Construct frequency distribution for the data
+# EXP - 1
 
  # 21-09-2024
 
@@ -35,10 +39,6 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/192938695-99fedc01-34d5-4d36-84df-5880e766ed0c.png)
 
 
-# Procedure :
-
-1. Construct frequency distribution for the data
-
 2. Find the  probability distribution from frequency distribution.
 
 3. Calculate mean using 
@@ -59,6 +59,7 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
+
 
 
 import numpy as np
@@ -85,7 +86,6 @@ for i in range(M + 1):
 sf = np.sum(f)
 
 p = list()
-
 for i in range(M + 1):
 
     p.append(f[i] / sf)
